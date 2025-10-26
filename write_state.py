@@ -13,11 +13,12 @@ class SetState(Turtle):
         state = data[us_states == where_state.title()]
         # state_index = list_states.index(where_state.title())
         print(state)
-        x_cord = state.x.iat[0]
-        y_cord = state.y.iat[0]
-        # x_cord = state.x
-        # y_cord = state.y
+        # x_cord = state.x.iat[0]
+        # y_cord = state.y.iat[0]
+        x_cord = state.x.item()
+        y_cord = state.y.item()
 
         # self.clear()
         self.goto(x=x_cord, y=y_cord)
         self.write(f"{where_state.title()}", align=ALIGNMENT, font=FONT)
+        # self.write(f"{state.state.item()}", align=ALIGNMENT, font=FONT)
